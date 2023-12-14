@@ -6,6 +6,7 @@ const app = express();
 const getCode = require('./getCode');
 const account = require('./manageAccount');
 
+app.use(cors());
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, '../frontend')));
 
