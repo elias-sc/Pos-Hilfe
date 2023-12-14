@@ -41,14 +41,16 @@ app.post('/get-exercise', (req, res) => {
 
 app.get('/get-exercise-amount', (req, res) => {
 
-    getCode.getAmountOfExercises()
+    /*getCode.getAmountOfExercises()
     .then(results => {
         console.log("HALLLOOOO: " + results);
         res.json(results);
     })
     .catch(error => {
         res.json(error);
-    });
+    });*/
+    console.log("HALLOOOO");
+    res.json("result": 3);
 });
 
 
