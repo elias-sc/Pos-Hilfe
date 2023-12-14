@@ -41,6 +41,7 @@ app.get('/get-exercise-amount', (req, res) => {
 
     getCode.getAmountOfExercises()
     .then(results => {
+        console.log("HALLLOOOO: " + results);
         res.json(results);
     })
     .catch(error => {
