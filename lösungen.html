@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pos Hilfe</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="stylesheets/navbar.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/form.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/übungen.css">
+</head>
+<body onload="fillSolutions()">
+    <nav class="nav-container">
+        <div class="navbar">
+            <div class="left-aligned">
+                <div id="logo">
+                    <img src="img/icons8-frog-100.png" alt="" width="25px">
+                </div>
+
+                
+                <div>
+                
+                    <a href="index.html">Home</a>
+                </div>
+                <div>
+                
+                    <a href="übungen.html">Übungen</a>
+                </div>
+                <div>
+            
+                    <a class="selected" href="lösungen.html">Lösungen</a>
+                </div>
+                <div>
+                
+                    <a href="hilfe.html">Hilfe</a>
+                </div>
+            </div>
+        
+            <div class="right-aligned">
+                <div id="buttons"> 
+                    <button onclick="showSignup()" id="signup-button">Sign up</button>
+                    <button onclick="showLogin()" id="login-button">Log in</button>
+                </div>
+
+                <div class="account-dropdown">
+                    <div id="account-name">TestUser</div>
+                    <div class="dropdown">
+                        <div id="logout-button" onclick="logout()">Logout</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>   
+    
+    <div class="grid-container" id="solution-container">
+        <a><div class="exercise">
+            <p class="exercise-title"></p>
+            <p class="exercise-id"></p>
+        </div></a>
+        <a><div class="exercise">
+            <p class="exercise-title"></p>
+            <p class="exercise-id"></p>
+        </div></a>
+        <a><div class="exercise">
+            <p class="exercise-title"></p>
+            <p class="exercise-id"></p>
+        </div></a>
+        <a><div class="exercise">
+            <p class="exercise-title"></p>
+            <p class="exercise-id"></p>
+        </div></a>
+        <a><div class="exercise">
+            <p class="exercise-title"></p>
+            <p class="exercise-id"></p>
+        </div></a>
+
+        <a><div class="exercise">
+            <p class="exercise-title"></p>
+            <p class="exercise-id"></p>
+        </div></a>
+        <a><div class="exercise">
+            <p class="exercise-title"></p>
+            <p class="exercise-id"></p>
+        </div></a>
+        <a><div class="exercise">
+            <p class="exercise-title"></p>
+            <p class="exercise-id"></p>
+        </div></a>
+        <a><div class="exercise">
+            <p class="exercise-title"></p>
+            <p class="exercise-id"></p>
+        </div></a>
+        <a><div class="exercise">
+            <p class="exercise-title"></p>
+            <p class="exercise-id"></p>
+        </div></a>
+
+        <a><div class="exercise">
+            <p class="exercise-title"></p>
+            <p class="exercise-id"></p>
+        </div></a>
+        <a><div class="exercise">
+            <p class="exercise-title"></p>
+            <p class="exercise-id"></p>
+        </div></a>
+        <a><div class="exercise">
+            <p class="exercise-title"></p>
+            <p class="exercise-id"></p>
+        </div></a>
+        <a><div class="exercise">
+            <p class="exercise-title"></p>
+            <p class="exercise-id"></p>
+        </div></a>
+        <a><div class="exercise">
+            <p class="exercise-title"></p>
+            <p class="exercise-id"></p>
+        </div></a>
+        <a><div class="exercise">
+            <p class="exercise-title"></p>
+            <p class="exercise-id"></p>
+        </div></a>
+    </div>
+
+    <div class="popup-wrapper">
+        <div class="popup" id="signup-container">
+            <h2 class="popup-title">Sign Up</h2>
+            <form id="signup-form">
+                <div class="input-wrapper">
+                    <img class="form-icon" src="img/icons8-account.png">
+                    <input type="text" name="username" placeholder="Username" maxlength="20">
+                </div>
+                
+                <br>
+                <div class="input-wrapper">
+                    <img class="form-icon" src="img/icons8-email.png">
+                    <input type="email" name="email" placeholder="Email" maxlength="50">
+                </div>
+                <br>
+
+                <div class="input-wrapper">
+                    <img class="form-icon" src="img/icons8-password.png">
+                    <input type="password" name="password" placeholder="Password">
+                </div>
+
+                <br>
+
+                <div class="error-container" id="signup-error">Invalid username</div>
+                <button class="submit-button" type="submit">Sign Up</button><br>
+                <button onclick="hideAllPopups()" class="close-button">Close</button>
+            </form>
+        </div>
+    </div>
+    
+    <div class="popup-wrapper">
+        <div class="popup" id="login-container">
+            <h2 class="popup-title">Log in</h2>
+            <form id="login-form">
+                <div class="input-wrapper">
+                    <img class="form-icon" src="img/icons8-account.png">
+                    <input type="text" name="username" placeholder="Username/Email">
+                </div>
+                <br>
+                <div class="input-wrapper">
+                    <img class="form-icon" src="img/icons8-password.png">
+                    <input type="password" name="password" placeholder="Password">
+                </div>
+                <br>
+                <div class="error-container" id="login-error">Invalid username</div>
+                <button class="submit-button" type="submit">Log In</button><br>
+                <button onclick="hideAllPopups()" class="close-button">Close</button>
+            </form>
+        </div>
+    </div>
+
+    <br><br><br>
+
+    <script src="javascript/app.js"></script>
+    <script src="javascript/account.js"></script>
+</body>
+</html>

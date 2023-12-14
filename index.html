@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pos Hilfe</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="stylesheets/navbar.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+    <link rel="stylesheet" href="stylesheets/bottomstyle.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/form.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/home.css">
+</head>
+<body>
+    <nav class="nav-container">
+        <div class="navbar">
+            <div class="left-aligned">
+                <div id="logo">
+                    <img src="img/icons8-frog-100.png" alt="" width="25px">
+                </div>
+
+                
+                <div>
+                
+                    <a class="selected" href="index.html">Home</a>
+                </div>
+                <div>
+                
+                    <a href="übungen.html">Übungen</a>
+                </div>
+                <div>
+            
+                    <a href="lösungen.html">Lösungen</a>
+                </div>
+                <div>
+                
+                    <a href="hilfe.html">Hilfe</a>
+                </div>
+            </div>
+        
+            <div class="right-aligned">
+                <div id="buttons"> 
+                    <button onclick="showSignup()" id="signup-button">Sign up</button>
+                    <button onclick="showLogin()" id="login-button">Log in</button>
+                </div>
+
+                <div class="account-dropdown">
+                    <div id="account-name">TestUser</div>
+                    <div class="dropdown">
+                        <div id="logout-button" onclick="logout()">Logout</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>  
+
+    <div class="box-container">
+        <div class="box">
+            <div class="inner-box"><h2 id="time-remaining">The next exercise will appear in:</h2></div>
+            <div class="inner-box">
+            <h2>Want to get started?</h2>
+            <p>Create an account and solve exercises right now</p>
+            </div>
+            <div class="inner-box">
+            <h2>Get programming excercises every day!</h2>
+            <p>You just have to sign up!</p>
+            </div>
+            <div class="inner-box">
+            <h2>This is a new way to improve yourself!</h2>
+            </div>
+        </div>    
+    </div>
+
+        
+        
+    <br><br>
+
+    <div class="box-parent">
+        <div class="bottom-side">
+
+            <div class="vertical-line"></div>
+            
+            
+            
+
+            <div class="texts">
+                <h3>Offers</h3>
+            </div>
+            
+            <div class="grid-container">
+                
+                <div class="grid-box">
+                    <div class="grid-item"><img src="img/icons8-java-kaffeetassenlogo-50.png" alt="" width="40px">
+                        <p>Learn and master Java</p>
+                    </div>
+                    <div class="grid-item"><img src="img/icons8-noten-50.png" alt="" width="40px">
+                        <p>Get good grades in programming</p></div>
+                    <div class="grid-item"><img src="img/icons8-training-30.png" alt="" width="40px">
+                        <p>Get exercises every day</p></div>
+                    <div class="grid-item"><img src="img/icons8-personal-trainer-hauttyp-1-48.png" alt="" width="40px">
+                        <p>Become an expert</p></div>
+                    <div class="grid-item"><img src="img/icons8-händeschütteln-herz-50.png" alt="" width="40px">
+                        <p>Become apart of our community</p></div>
+                    <div class="grid-item"><img src="img/icons8-anmelden-abgerundet-rechts-50.png" alt="" width="40px">
+                        <p>Get started now and sign up</p></div>
+                </div>  
+            </div>
+        </div>
+        <div class="right-side">
+            <div class="side-box-container">
+                <div class="side-box-item"><h1>Why us?</h1>
+                    <p>Why us? Thats simple. On our site you have many exclusive exercises every day. 
+                        You also get the solution to them right away. With only 4,99$ you will probably get better grades 
+                        in short time. Invest in yourself now!</p>
+                </div>     
+            </div>
+        </div>
+    </div>
+
+    <div class="popup-wrapper">
+        <div class="popup" id="signup-container">
+            <h2 class="popup-title">Sign Up</h2>
+            <form id="signup-form">
+                <div class="input-wrapper">
+                    <img class="form-icon" src="img/icons8-account.png">
+                    <input type="text" name="username" placeholder="Username" maxlength="20">
+                </div>
+                
+                <br>
+                <div class="input-wrapper">
+                    <img class="form-icon" src="img/icons8-email.png">
+                    <input type="email" name="email" placeholder="Email" maxlength="50">
+                </div>
+                <br>
+
+                <div class="input-wrapper">
+                    <img class="form-icon" src="img/icons8-password.png">
+                    <input type="password" name="password" placeholder="Password">
+                </div>
+
+                <br>
+
+                <div class="error-container" id="signup-error">Invalid username</div>
+                <button class="submit-button" type="submit">Sign Up</button><br>
+                <button onclick="hideAllPopups()" class="close-button">Close</button>
+            </form>
+        </div>
+    </div>
+    
+    <div class="popup-wrapper">
+        <div class="popup" id="login-container">
+            <h2 class="popup-title">Log in</h2>
+            <form id="login-form">
+                <div class="input-wrapper">
+                    <img class="form-icon" src="img/icons8-account.png">
+                    <input type="text" name="username" placeholder="Username/Email">
+                </div>
+                <br>
+                <div class="input-wrapper">
+                    <img class="form-icon" src="img/icons8-password.png">
+                    <input type="password" name="password" placeholder="Password">
+                </div>
+                <br>
+                <div class="error-container" id="login-error">Invalid username</div>
+                <button class="submit-button" type="submit">Log In</button><br>
+                <button onclick="hideAllPopups()" class="close-button">Close</button>
+            </form>
+        </div>
+    </div>
+    
+    <script src="javascript/time.js"></script>
+    <script src="javascript/account.js"></script>
+</body>
+</html>
