@@ -7,7 +7,7 @@ const getCode = require('./getCode');
 const account = require('./manageAccount');
 
 app.use(bodyParser.json());
-app.use(express.static(path.join(__dirname, '../frontend')));
+app.use(express.static("index.html"));
 
 
 app.post('/execute-code', async (req, res) => {
