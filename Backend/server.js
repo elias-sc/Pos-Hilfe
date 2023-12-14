@@ -50,7 +50,7 @@ app.get('/get-exercise-amount', (req, res) => {
         res.json(error);
     });*/
     console.log("HALLOOOO");
-    res.json("result": 3);
+    res.json({"result": 3});
 });
 
 
