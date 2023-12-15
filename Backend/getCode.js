@@ -44,9 +44,13 @@ async function getTests(exercise_id) {
 }
 
 async function getAmountOfExercises(){
+    console.log("1");
     const connection = await db.getConnection();
+    console.log("2");
     const [rows, fields] = await connection.execute('SELECT * FROM exercises');
+    console.log("3");
     connection.release();
+    console.log(rows);
     return rows.length;
 }
 
