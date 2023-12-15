@@ -40,7 +40,7 @@ app.post('/get-exercise', (req, res) => {
 });
 
 app.get('/get-exercise-amount', (req, res) => {
-
+    console.log("AAA");
     getCode.getAmountOfExercises()
     .then(results => {
         console.log("HALLLOOOO: " + results);
