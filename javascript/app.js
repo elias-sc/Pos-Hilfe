@@ -1,5 +1,5 @@
 function getCodeOutput(code){
-    return fetch('/execute-code', {
+    return fetch('https://pos-hilfe.onrender.com/execute-code', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -28,7 +28,7 @@ async function executeCode(){
 }
 
 function getExercise(id) {
-    return fetch('/get-exercise', {
+    return fetch('https://pos-hilfe.onrender.com/get-exercise', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -43,7 +43,7 @@ function getExercise(id) {
 }
 
 function getAmountOfExercises(){
-    return fetch('/get-exercise-amount', {
+    return fetch('https://pos-hilfe.onrender.com/get-exercise-amount', {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
@@ -187,7 +187,7 @@ async function loadSolution() {
 }
 
 function getTests(exercise_id) {
-    return fetch('/get-tests', {
+    return fetch('https://pos-hilfe.onrender.com/get-tests', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -246,7 +246,7 @@ async function markExerciseCompleted(exerciseId) {
         return;
     }
 
-    fetch('/store-completed-exercise', {
+    fetch('https://pos-hilfe.onrender.com/store-completed-exercise', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -267,7 +267,7 @@ function getCompletedExercises(){
         return;
     }
 
-    return fetch('/get-completed-exercises', {
+    return fetch('https://pos-hilfe.onrender.com/get-completed-exercises', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
