@@ -46,7 +46,7 @@ signupForm.addEventListener('submit', function (event) {
         return;
     }
 
-    fetch('/signup', {
+    fetch('https://pos-hilfe.onrender.com/signup', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -88,7 +88,7 @@ loginForm.addEventListener('submit', function (event) {
         formDataObject[key] = value;
     });
 
-    fetch('/login', {
+    fetch('https://pos-hilfe.onrender.com/login', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
