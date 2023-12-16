@@ -243,10 +243,7 @@ async function markExerciseCompleted(exerciseId) {
 
     const isCurrentExerciseCompleted = await isExerciseCompleted(exerciseId);
     if(isCurrentExerciseCompleted){
-        console.log("Already completed " + exerciseId);
         return;
-    } else {
-        console.log("Not completed " + exerciseId);
     }
 
     fetch('https://pos-hilfe.onrender.com/store-completed-exercise', {
@@ -297,5 +294,5 @@ async function isExerciseCompleted(exerciseId) {
 
     exercises = completedExercises;
        
-    return exercises.includes(exerciseId);
+    return exercises.includes(parseInt(exerciseId));
 }
